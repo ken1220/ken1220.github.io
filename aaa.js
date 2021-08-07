@@ -1,5 +1,8 @@
+//jsonファイルURL
+var url = 'https://raw.githubusercontent.com/Dimbreath/ArknightsData/master/ja-JP/gamedata/excel/activity_table.json';
+
 new Vue({
-  el: '#app',
+  el: '#happyend',
   data () {
     return {
       info: null
@@ -7,7 +10,7 @@ new Vue({
   },
   mounted () {
     axios
-      .get("https://raw.githubusercontent.com/Dimbreath/ArknightsData/master/ja-JP/gamedata/excel/activity_table.json") //ここにURLを入れる
-      .then(response => (this.info = response))
+      .get(url)
+      .then(response => {this.info = response.data})
   }
 })
