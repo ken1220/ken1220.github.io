@@ -68,17 +68,12 @@
   
 <h1>Hello PWAAaaa.</h1>
 
-
-
-  <div id ="aaa"></div>
-
- 
+<div id="nav-placeholder"></div>
 <script>
-
-$("aaa").load("./nav.html");
-
+$.get("nav.html", function(data){
+$("#nav-placeholder").replaceWith(data);
+});
 </script>
-
 
   <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
   <a href="p.html">p.html</a>
